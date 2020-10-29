@@ -39,9 +39,9 @@ def server():
         # request.args.get: Data from query string. (The part in the URL after the question mark).
         # request.form.get: Data passed with the request.
         logging.info(f'##################################################')
-        logging.info(f'headers.get | {request.headers.get("some-name")}')
-        logging.info(f'args.get    | {request.args.get("some-name")}')
-        logging.info(f'form.get    | {request.form.get("some-name")}')
+        logging.info(f'request.headers.get | {request.headers.get("some-name")}')
+        logging.info(f'request.args.get    | {request.args.get("some-name")}')
+        logging.info(f'request.form.get    | {request.form.get("some-name")}')
         return {}
     
     app.run(host=ip, port=port)
